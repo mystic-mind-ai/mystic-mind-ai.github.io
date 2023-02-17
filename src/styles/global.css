@@ -1,0 +1,50 @@
+html {
+    background-color: black;
+    font-family: "Rubik", Helvetica, sans-serif;
+}
+
+body {
+    color: white;
+    text-align: center;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+h1, h2 {
+    font-size: 60px;
+}
+
+h2 {
+    font-family: "Oxygen Mono", Helvetica, sans-serif;
+}
+
+p {
+    font-family: "Oxygen Mono", Helvetica, sans-serif;
+    font-size: 18px;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p a {
+    color: white;
+}
+
+p a:hover {
+    color: orange;
+}
+
+p a .visited {
+    color: white;
+}
+
+.introDiv {
+    height: 35vh;
+}

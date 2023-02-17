@@ -1,0 +1,26 @@
+.logoStyle {
+    font-size: 100px;
+}
+
+.discordButton {
+    background-color: #5865F2;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Rubik", Helvetica, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+.sectionSpacer {
+    height: 10vh;
+}
+
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 6s;
+  }
+  
