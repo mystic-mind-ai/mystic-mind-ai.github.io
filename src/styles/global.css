@@ -6,6 +6,7 @@ html {
 body {
     color: white;
     text-align: center;
+    scrollbar-color: #555;
 }
 
 canvas {
@@ -33,6 +34,23 @@ p {
     margin-right: auto;
 }
 
+nav {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-family: "Oxygen Mono", Helvetica, sans-serif;
+    font-size: 18px;
+    width: 90vw;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1vh;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5%;
+}
+
 p a {
     color: white;
 }
@@ -41,10 +59,27 @@ p a:hover {
     color: orange;
 }
 
-p a .visited {
-    color: white;
+.introDiv { 
+    display: grid;
+    height: calc(100vh - 16px);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
-.introDiv {
-    height: 35vh;
+.introDiv div {
+    align-items: center;
+}
+
+@media (max-width: 650px) {
+    nav {
+        font-size: 16px;
+    }
+
+    h1, h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 16px;
+        width: 60vw;
+    }
 }

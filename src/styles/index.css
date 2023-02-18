@@ -22,5 +22,10 @@
 
 .animate__animated.animate__fadeInDown {
     --animate-duration: 6s;
-  }
-  
+}
+
+@media (max-width: 650px) {
+    .logoStyle {
+        font-size: 50px;
+    }
+}
