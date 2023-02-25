@@ -50,7 +50,7 @@ class Trails extends React.Component {
                 if (trails[i].alive) {
                     if (trails[i].life > 0) {
                         if (i < numTrails)
-                            ctx.fillStyle = 'hsla(210, 100%, 20%,' + (
+                            ctx.fillStyle = 'hsla(263, 61%, 29%,' + (
                             trails[i].life / maxLife) + ')';
                         else
                             ctx.fillStyle = 'hsla(30, 70%, 30%,' + (
