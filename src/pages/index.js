@@ -16,7 +16,8 @@ const IndexPage = () => {
         </div>
         <div>
           <h1 className="animate__animated animate__fadeInDown logoStyle">Mystic Mind</h1>
-          <a className="discordButton" href="https://discord.gg/GfdNApCcE4" target="_blank" rel="noreferrer">Join us on Discord</a>
+          <p className="animate__animated animate__fadeIn animate__delay-1s tagline">The premier AI solution for generating RPG content</p>
+          <a className="discordButton" href="https://discord.gg/gpFPdVxuYq" target="_blank" rel="noreferrer">Join us on Discord</a>
         </div>
         <div />
       </div>
@@ -27,7 +28,7 @@ const IndexPage = () => {
       <div className="sectionSpacer"></div>
 
       <h2 id="support">Support</h2>
-      <p>For help, questions, or inquiries, please <a href="https://discord.gg/GfdNApCcE4" target="_blank" rel="noreferrer">visit our Discord</a> for more information.</p>
+      <p>For help, questions, or inquiries, please <a href="https://discord.gg/gpFPdVxuYq" target="_blank" rel="noreferrer">visit our Discord</a> for more information.</p>
       <div className="sectionSpacer"></div>
 
       <Trails />

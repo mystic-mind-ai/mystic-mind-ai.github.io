@@ -1,5 +1,6 @@
 .logoStyle {
     font-size: 100px;
+    margin-bottom: 2rem;
 }
 
 .discordButton {
@@ -16,6 +17,12 @@
     border-radius: 8px;
 }
 
+.tagline {
+    font-family: "Rubik", Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    color: #B3B3B3;
+}
+
 .sectionSpacer {
     height: 10vh;
 }
@@ -23,6 +30,10 @@
 .animate__animated.animate__fadeInDown {
     --animate-duration: 6s;
 }
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+  }
 
 @media (max-width: 650px) {
     .logoStyle {
