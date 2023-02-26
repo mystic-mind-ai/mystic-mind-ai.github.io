@@ -59,6 +59,19 @@ p a:hover {
     color: orange;
 }
 
+.introDiv { 
+    display: grid;
+    height: calc(100vh - 16px);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (orientation: landscape) and (max-height: 650px) {
+    .introDiv {
+        display: block;
+        height: auto;
+    }
+}
+
 @media (max-width: 650px) {
     nav {
         font-size: 16px;

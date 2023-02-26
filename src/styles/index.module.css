@@ -17,14 +17,11 @@
     border-radius: 8px;
 }
 
-.bkgLogo {
-    position: fixed;
-    top: -1.5%;
-    left: -1.5%;
-    z-index: -1;
-    width: 103%;
-    height: 103%;
-}
+.bkgLogo { 
+    background: url("../images/logo.svg") no-repeat center center fixed;
+    background-size: 103% 103%;
+    background-color: black;
+}  
 
 .tagline {
     font-family: "Rubik", Helvetica, sans-serif;
@@ -36,17 +33,11 @@
     height: 10vh;
 }
 
-.introDiv { 
-    display: grid;
-    height: calc(100vh - 16px);
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.animate__animated.animate__fadeInDown {
+.fadeInDown {
     --animate-duration: 6s;
 }
 
-.animate__animated.animate__fadeIn {
+.fadeIn {
     --animate-duration: 2s;
   }
 
@@ -59,10 +50,5 @@
 @media screen and (orientation: landscape) and (max-height: 650px) {
     .logoStyle {
         font-size: 80px;
-    }
-
-    .introDiv {
-        display: block;
-        height: auto;
     }
 }
