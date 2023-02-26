@@ -47,10 +47,10 @@ class Trails extends React.Component {
         function anim() {
             window.requestAnimationFrame(anim);
 
-            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-            const calcSize = Math.min(window.innerHeight * 0.8, window.innerWidth * 0.8);
-            const widthHalf = (window.innerWidth / 2) - (calcSize / 2);
-            const heightHalf = (window.innerHeight / 2) - (calcSize / 2);
+            ctx.clearRect(0, 0, c.width, c.height);
+            const calcSize = Math.min(c.height * 1.03, c.width * 1.03);
+            const widthHalf = (c.width / 2) - (calcSize / 2);
+            const heightHalf = (c.height / 2) - (calcSize / 2);
             ctx.drawImage(logoImg, widthHalf, heightHalf, calcSize, calcSize);
 
             for (var i = 0; i < trails.length; i++) {
@@ -92,8 +92,8 @@ class Trails extends React.Component {
         }
 
         function spawn(i) {
-            trails[i].x = (3 * window.innerWidth / 8) + (Math.random() * (1 * window.innerWidth / 4));
-            trails[i].y = (3 * window.innerHeight / 8) + (Math.random() * (1 * window.innerHeight / 4));
+            trails[i].x = (3 * c.width / 8) + (Math.random() * (1 * c.width / 4));
+            trails[i].y = (3 * c.height / 8) + (Math.random() * (1 * c.height / 4));
             trails[i].flip = Math.random() >= 0.5;
             trails[i].life = (maxLife / 2) + (Math.random() * maxLife);
             trails[i].alive = true;
