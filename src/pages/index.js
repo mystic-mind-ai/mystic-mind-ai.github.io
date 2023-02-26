@@ -1,6 +1,7 @@
 import * as React from "react"
 import "../styles/index.css"
 import 'animate.css';
+import logo from "../images/logo.svg"
 
 import Trails from "../components/trails"
 
@@ -21,6 +22,8 @@ const IndexPage = () => {
         </div>
         <div />
       </div>
+      
+      <img className="bkgLogo" src={logo} alt="Mystic Mind logo" />
 
       <h2 id="about">About</h2>
       <p>Mystic Mind is the premier AI solution for generating any RPG content you wish. Create spells, items, monsters, and more with a single command.</p>
@@ -38,4 +41,9 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Mystic Mind</title>
+export const Head = () => {
+  <>
+    <meta name="description" content="Mystic Mind is the premier AI solution for RPG content." />
+    <title>Mystic Mind</title> 
+  </>
+}

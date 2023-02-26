@@ -17,6 +17,15 @@
     border-radius: 8px;
 }
 
+.bkgLogo {
+    position: fixed;
+    top: -1.5%;
+    left: -1.5%;
+    z-index: -1;
+    width: 103%;
+    height: 103%;
+}
+
 .tagline {
     font-family: "Rubik", Helvetica, sans-serif;
     margin-bottom: 2rem;
@@ -25,6 +34,12 @@
 
 .sectionSpacer {
     height: 10vh;
+}
+
+.introDiv { 
+    display: grid;
+    height: calc(100vh - 16px);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .animate__animated.animate__fadeInDown {
@@ -38,5 +53,16 @@
 @media (max-width: 650px) {
     .logoStyle {
         font-size: 50px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 650px) {
+    .logoStyle {
+        font-size: 80px;
+    }
+
+    .introDiv {
+        display: block;
+        height: auto;
     }
 }

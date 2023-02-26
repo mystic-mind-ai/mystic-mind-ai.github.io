@@ -1,13 +1,12 @@
 import React from "react"
-import logo from "../images/logo.svg"
 
-class Trails extends React.Component {
-    componentDidMount() {
+export default function Trails() {
+    let canvas = React.useRef(null);
+
+    React.useEffect(() => {
         //initial
-        const c = this.refs.canvas
-        const bg = this.refs.bg
+        const c = canvas.current;
         const ctx = c.getContext('2d')
-        const bgCtx = bg.getContext('2d')
         var oldDate = Date.now()
 
         //parameters
@@ -16,15 +15,7 @@ class Trails extends React.Component {
         const size = 10
         const maxLife = 200
 
-        const logoImg = new Image(256, 256);
-        logoImg.src = logo;
-
         var trails = []
-
-        const repaintColor = 'rgba(0, 0, 0, 1)'
-
-        bgCtx.fillStyle = repaintColor;
-        resize();
 
         function Particle() {
             this.x = 0;
@@ -42,17 +33,13 @@ class Trails extends React.Component {
         }
 
         window.addEventListener('mousemove', handleMouseMove)
-        window.addEventListener('resize', resizeCanvas, false);
 
         function anim() {
             window.requestAnimationFrame(anim);
 
+            checkResize();
             ctx.clearRect(0, 0, c.width, c.height);
-            const calcSize = Math.min(c.height * 1.03, c.width * 1.03);
-            const widthHalf = (c.width / 2) - (calcSize / 2);
-            const heightHalf = (c.height / 2) - (calcSize / 2);
-            ctx.drawImage(logoImg, widthHalf, heightHalf, calcSize, calcSize);
-
+            
             for (var i = 0; i < trails.length; i++) {
 
                 if (trails[i].alive) {
@@ -72,10 +59,10 @@ class Trails extends React.Component {
 
                         if (trails[i].direction === false) {
                             trails[i].x += dirFlip * speed;
-                            ctx.fillRect(trails[i].x, trails[i].y, size, size);
+                            ctx.fillRect(Math.floor(trails[i].x), Math.floor(trails[i].y), size, size);
                         } else {
                             trails[i].y += dirFlip * speed;
-                            ctx.fillRect(trails[i].x, trails[i].y, size, size);
+                            ctx.fillRect(Math.floor(trails[i].x), Math.floor(trails[i].y), size, size);
                         }
                         trails[i].life--;
                     }
@@ -116,25 +103,20 @@ class Trails extends React.Component {
             }
         }
 
-        function resize() {
-            c.width = bg.width = window.innerWidth;
-            c.height = bg.height = window.innerHeight;
-            bgCtx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        }
-
-        function resizeCanvas(event) {
-            resize()
+        function checkResize() {
+            if(c.width !== window.innerWidth || c.height !== window.innerHeight){
+                c.width = window.innerWidth;
+                c.height = window.innerHeight;
+            }        
         }
 
         anim();
-    }
-    render() {
-        return (
-          <div>
-            <canvas ref="bg"></canvas>
-            <canvas ref="canvas"></canvas>
+    });
+
+    return (
+        <div>
+            <canvas ref={canvas}></canvas>
         </div>
-      )
-    }
+    )
 }
-export default Trails
+    
