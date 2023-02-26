@@ -1,7 +1,10 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-module.exports = {
+module.exports = { 
+  siteMetadata: {
+    siteUrl: `https://www.mysticmind.io`,
+  },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
