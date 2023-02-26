@@ -22,7 +22,7 @@ const IndexPage = () => {
         </div>
         <div />
       </div>
-      
+
       <img className="bkgLogo" src={logo} alt="Mystic Mind logo" />
 
       <h2 id="about">About</h2>
@@ -41,9 +41,9 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => {
+export const Head = () => (
   <>
+    <title>Mystic Mind</title>
     <meta name="description" content="Mystic Mind is the premier AI solution for RPG content." />
-    <title>Mystic Mind</title> 
   </>
-}
+)
