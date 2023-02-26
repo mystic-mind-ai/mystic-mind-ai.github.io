@@ -1,4 +1,5 @@
 import React from "react"
+import logo from "../images/logo.svg"
 
 class Trails extends React.Component {
     componentDidMount() {
@@ -14,6 +15,9 @@ class Trails extends React.Component {
         const speed = .5
         const size = 10
         const maxLife = 200
+
+        const logoImg = new Image(256, 256);
+        logoImg.src = logo;
 
         var trails = []
 
@@ -44,6 +48,10 @@ class Trails extends React.Component {
             window.requestAnimationFrame(anim);
 
             ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+            const calcSize = Math.min(window.innerHeight * 0.8, window.innerWidth * 0.8);
+            const widthHalf = (window.innerWidth / 2) - (calcSize / 2);
+            const heightHalf = (window.innerHeight / 2) - (calcSize / 2);
+            ctx.drawImage(logoImg, widthHalf, heightHalf, calcSize, calcSize);
 
             for (var i = 0; i < trails.length; i++) {
 
