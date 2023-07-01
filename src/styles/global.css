@@ -1,6 +1,8 @@
 html {
-    background-color: black;
     font-family: "Rubik", Helvetica, sans-serif;
+    background: url("../images/logo.svg") no-repeat center center fixed;
+    background-size: 103% 103%;
+    background-color: black;
 }
 
 body {
@@ -63,12 +65,6 @@ p a:hover {
     display: grid;
     height: calc(100vh - 16px);
     grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-main { 
-    background: url("../images/logo.svg") no-repeat center center fixed;
-    background-size: 103% 103%;
-    background-color: black;
 }
 
 .footer {
