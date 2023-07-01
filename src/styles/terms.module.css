@@ -1,0 +1,33 @@
+.homeLink {
+    top: 1vh;
+}
+
+.termsContent p, ol {
+    text-align: left;
+    font-size: 16px;
+}
+
+.termsContent h1 {
+    font-size: 36px;
+}
+
+.termsContent h2 {
+    font-family: "Rubik", Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+@media (max-width: 650px) {
+    .termsContent p,ol {
+        font-size: 12px;
+        word-break: break-all;
+    }
+    .termsContent ol {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 1024) {
+    .termsContent p {
+        width: 80vh;
+    }
+}

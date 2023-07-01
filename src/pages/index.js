@@ -3,6 +3,7 @@ import * as indexStyles from "../styles/index.module.css"
 import 'animate.css';
 
 import Trails from "../components/trails"
+import Footer from "../components/footer"
 
 const IndexPage = () => {
   return (
@@ -31,6 +32,7 @@ const IndexPage = () => {
       <p>For help, questions, or inquiries, please <a href="https://discord.gg/gpFPdVxuYq" target="_blank" rel="noreferrer">visit our Discord</a> for more information.</p>
       <div className={indexStyles.sectionSpacer}></div>
 
+      <Footer />
       <Trails />
     </main>
   )
@@ -40,7 +42,7 @@ export default IndexPage
 
 export const Head = () => (
   <>
-    <html lang="en" className={indexStyles.bkgLogo} />
+    <html lang="en" />
     <title>Mystic Mind</title>
     <meta name="description" content="Mystic Mind is the premier AI solution for RPG content." />
   </>
