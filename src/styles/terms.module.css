@@ -26,8 +26,8 @@
     }
 }
 
-@media screen and (orientation: portrait) and (max-width: 1024) {
-    .termsContent p {
-        width: 80vh;
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+    .termsContent p,ol {
+        width: 60vw;
     }
 }
